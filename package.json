@@ -1,0 +1,19 @@
+{
+  "name": "esbuildar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-one": "esbuild app.jsx --bundle --outfile=out.js",
+    "build-two": "esbuild"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "0.25.9"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}
