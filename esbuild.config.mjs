@@ -9,6 +9,7 @@ const config = {
   // bundling is a compile-time operation
   bundle: true,
   outdir: "dist",
+  platform: "browser", // "browser" or "node" or "neutral"
 };
 
 // The build function runs the esbuild executable in a child process and returns a promise that resolves when the build is complete.
@@ -29,6 +30,8 @@ process.stdin.on("data", async () => {
   }
 });
 
+// watch: automatically start a build when you edit and save a file.
+// serve: serve the latest build, but block until it's done.
 await ctx.watch();
 let { hosts, port } = await ctx.serve();
 
